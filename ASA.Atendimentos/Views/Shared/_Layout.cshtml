@@ -1,0 +1,114 @@
+﻿@using System.Configuration
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - ASA Atendimentos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="cache-control" content="no-cache, no-store" />
+    <meta http-equiv="pragma" content="no-cache, no-store" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <link href="@Url.Content("http://www.adventistas.org/pt/asa/wp-content/themes/pa-thema-sedes/flavours/static/img/favicons/favicon.ico")" rel="shortcut icon" type="image/x-icon" />
+
+    @*Tag para pegar o caminho absoluto da URL*@
+    <base href='@ConfigurationManager.AppSettings["baseUrl"].ToString()'>
+
+    <script>
+        $(document).ready(function () {
+            $(window).on("load", function () {
+                $(".loader").fadeOut("slow");
+            });
+
+            //$('a:not(.dropdown-toggle)').click(function (e) {
+            //    e.preventDefault();
+            //    t = $(this).attr('href');
+            //    $('.loader').delay(350).fadeIn('slow', function () {
+            //        window.location.href = t;
+            //    });
+            //});
+        })
+    </script>
+
+</head>
+<body>
+
+    <div class="loader"></div>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand img-navbar">
+                    <img src="http://www.adventistas.org/pt/asa/wp-content/themes/pa-thema-sedes/flavours/static/img/favicons/favicon.ico" alt=" Atendimento" />
+                    <span>Atendimento</span>
+                </a> 
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Cadastrar <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contatos", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Tabelas", "Tables", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contatos", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Tabelas", "Tables", "Home")</li>
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+
+    <div id="all" class="container body-content">
+        @RenderBody()
+    </div>
+    
+    <footer>
+        <hr />
+        <p style="text-align:center">&copy; @DateTime.Now.Year - Ação Solidária Adventista</p>
+    </footer>
+
+    <!--Modal bootstrap-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width:38%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title panel-title" id="modal-title">
+                        @ViewBag.ModalTitle
+                    </h4>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    @Html.Raw(@ViewBag.ModalBody)
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-2">
+                        <button id="btnModalOk" type="button" class="btn btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            @Html.Raw(@ViewBag.JS);
+        </script>
+
+    </div>
+</body>
+</html>

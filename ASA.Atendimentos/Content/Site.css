@@ -1,0 +1,161 @@
+﻿html{
+    height:100%;
+}
+body {
+    height:90%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    min-height:100%;
+	position:relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer{
+    background-color:#fff;
+    padding: 20px 20px 6px 20px;
+    bottom:0;
+	width:100%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../images/FadingLines.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.navbar-inverse {
+    background-color: #F8F8F8;
+    box-shadow: inset 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+a.navbar-brand.img-navbar {
+    margin-top: -6px;
+}
+
+a.dropdown-toggle,
+.nav-tabs > li > a,
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-brand,
+a.navbar-brand.img-navbar:hover {
+    color: #424242;
+}
+
+.nav-tabs > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-brand span:hover {
+    color: #000!important;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover{
+    color:#fff!important;
+}
+
+.navbar-brand > img {
+    display: inline;
+}
+
+/*Accordion*/
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+}
+
+div.panel-accordion {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel-accordion.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+/*fim*/
+
+table td,
+table th{
+    white-space:nowrap
+}
+
+.field-validation-error span
+{
+    background-color: #ffffcc;
+    border: 1px solid #cc9933;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px 1px rgba(230, 59, 37, 0.28);
+    color: #933;
+    font-size: 83%;
+    margin-left: 11px;
+    margin-top: -4px;
+    padding: 5px;
+    position: absolute;
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(230,59,37,0.28);
+    -moz-box-shadow: 1px 1px 4px 1px rgba(230,59,37,0.28);
+    box-shadow: 1px 1px 4px 1px rgba(230,59,37,0.28);
+}
+
+.field-validation-error span:after
+{
+    background: rgba(0, 0, 0, 0) url("../Images/image.axd.gif") no-repeat scroll left center;
+    content: "";
+    font-size: 2em;
+    height: 100%;
+    left: -10px;
+    margin-top: -5.5px;
+    position: absolute;
+    width: 100%;
+}

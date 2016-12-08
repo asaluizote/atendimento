@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASA.Atendimentos", "ASA.Atendimentos\ASA.Atendimentos.csproj", "{49124D1C-6C4D-4906-B1AA-190E1A3F1AB0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jorgejansen2011.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ASA.Atendimentos\\ASA.Atendimentos.csproj
+		SccProjectName1 = ASA.Atendimentos
+		SccLocalPath1 = ASA.Atendimentos
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49124D1C-6C4D-4906-B1AA-190E1A3F1AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49124D1C-6C4D-4906-B1AA-190E1A3F1AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49124D1C-6C4D-4906-B1AA-190E1A3F1AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49124D1C-6C4D-4906-B1AA-190E1A3F1AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
